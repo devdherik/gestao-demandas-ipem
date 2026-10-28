@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #222; background: #eee; font-family: Arial, sans-serif; line-height: 1.5; }
+.cabecalho { padding: 1.25rem 1.5rem; background: #fff; border-bottom: 1px solid #888; }
+h1 { margin: 0; font-size: 1.5rem; }
+.cabecalho p { margin: .35rem 0 0; color: #555; }
+main { padding: 1.5rem; max-width: 100rem; margin: auto; }
+h2 { font-size: 1.25rem; }
+fieldset { margin: 1.25rem 0; padding: 1rem; border: 1px solid #999; background: #fafafa; }
+legend { padding: 0 .5rem; }
+.filtros { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 1rem; }
+label { display: flex; flex-direction: column; gap: .4rem; font-size: .9rem; }
+input, select { width: 100%; min-width: 0; padding: .65rem; font: inherit; color: #444; background: #eee; border: 1px solid #aaa; border-radius: 0; }
+.quadro { display: grid; grid-template-columns: repeat(6, minmax(13rem, 1fr)); gap: .8rem; overflow-x: auto; padding: .3rem .3rem 1rem; }
+.quadro:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
+.coluna { padding: 1rem; min-height: 20rem; background: #e4e4e4; border: 1px dashed #888; }
+h3 { margin: 0 0 1.25rem; font-size: 1rem; }
+.estado-vazio { color: #555; font-size: .9rem; }
+.nota { color: #555; font-size: .85rem; }
+@media (max-width: 60rem) { .filtros { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 35rem) { main, .cabecalho { padding: 1rem; } .filtros { grid-template-columns: 1fr; } }

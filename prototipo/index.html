@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadro de demandas — IPEM/RN</title>
+  <link rel="stylesheet" href="assets/css/kanban.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Gestão de Demandas · IPEM/RN</h1>
+    <p>Protótipo de baixa fidelidade · CORED</p>
+  </header>
+  <main>
+    <section aria-labelledby="titulo-quadro">
+      <h2 id="titulo-quadro">Quadro Kanban</h2>
+      <p id="aviso-etapa">Primeira etapa: estrutura do quadro. Pesquisa, cartões e movimentação serão adicionados nas próximas etapas.</p>
+      <form aria-label="Pesquisa de demandas">
+        <fieldset disabled aria-describedby="aviso-etapa">
+          <legend>Filtros · disponíveis em etapa posterior</legend>
+          <div class="filtros">
+            <label for="busca">Assunto, documento ou processo
+              <input id="busca" name="busca" type="search" placeholder="Pesquisar demandas">
+            </label>
+            <label for="origem">Origem
+              <select id="origem" name="origem"><option>Todas</option><option>CORED/Inmetro</option><option>IPEM/RN</option></select>
+            </label>
+            <label for="responsavel">Responsável pela execução
+              <select id="responsavel" name="responsavel"><option>Todos</option><option>Jaime</option><option>Rafaela</option><option>Flávia</option><option>Bruno</option></select>
+            </label>
+            <label for="situacao">Situação
+              <select id="situacao" name="situacao"><option>Todas</option><option>Recebidas</option><option>Em planejamento</option><option>Em execução</option><option>Aguardando retorno</option><option>Em checagem</option><option>Concluídas</option></select>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="quadro" role="region" aria-label="Etapas do Kanban" tabindex="0">
+        <section class="coluna" aria-labelledby="etapa-1"><h3 id="etapa-1">Recebidas</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+        <section class="coluna" aria-labelledby="etapa-2"><h3 id="etapa-2">Em planejamento</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+        <section class="coluna" aria-labelledby="etapa-3"><h3 id="etapa-3">Em execução</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+        <section class="coluna" aria-labelledby="etapa-4"><h3 id="etapa-4">Aguardando retorno</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+        <section class="coluna" aria-labelledby="etapa-5"><h3 id="etapa-5">Em checagem</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+        <section class="coluna" aria-labelledby="etapa-6"><h3 id="etapa-6">Concluídas</h3><p class="estado-vazio">Sem cartões nesta etapa do protótipo.</p></section>
+      </div>
+      <p class="nota">As colunas são uma proposta para validação do fluxo.</p>
+    </section>
+  </main>
+</body>
+</html>
