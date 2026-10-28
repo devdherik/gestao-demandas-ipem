@@ -1,28 +1,25 @@
 # Organização do protótipo
 
-O protótipo serve para validar o fluxo de demandas antes da implementação da aplicação.
+As telas ficam em `prototipo/`. O HTML contém a estrutura e os textos; os estilos ficam em `assets/css/kanban.css`.
 
-## Separação de responsabilidades
+Quando os filtros e a movimentação forem adicionados, o JavaScript será dividido entre dados de exemplo, regras e atualização da tela. Por enquanto, o quadro é estático e não precisa de dependências.
 
-- `prototipo/index.html`: estrutura semântica e conteúdo das telas.
-- `prototipo/assets/css/kanban.css`: apresentação em baixa fidelidade e adaptação a diferentes larguras.
-- JavaScript será introduzido quando houver comportamento a validar. Dados de exemplo, regras de movimentação e atualização da interface deverão ficar em módulos separados.
+## Regras do quadro
 
-A abordagem é de melhoria progressiva: a estrutura visual deve ser compreensível sem JavaScript. Não há necessidade de framework, MVC ou padrões de criação de objetos nesta etapa. A separação entre apresentação, regras e dados evita concentrar toda a aplicação em um HTML.
+Todos podem mover cartões. Apenas quem recebeu originalmente a demanda pode trocar o executor e concluir o atendimento. A delegação não transfere essa responsabilidade.
 
-## Regras que orientarão as próximas etapas
+Demandas apenas para ciência são encerradas depois da confirmação de todos os destinatários. Quando houver checagem, ela será feita pela pessoa indicada.
 
-Todos podem mover cartões. Somente o destinatário original altera o executor da demanda e conclui demandas com providências. Demandas apenas para ciência encerram após todas as confirmações. Uma pessoa indicada realiza a checagem.
+No protótipo, essas regras servirão para validar o fluxo. Na aplicação, as permissões também precisarão ser conferidas no servidor.
 
-A estrutura visual não representa controle de acesso. As regras serão demonstradas posteriormente e, na aplicação real, deverão ser verificadas também no servidor.
+## Próximas partes
 
-## Evolução
+- Cartões de exemplo e pesquisa por origem, responsável e situação.
+- Detalhes da demanda, ciência e planejamento das tarefas.
+- Movimentação, checagem e conclusão.
 
-1. Estrutura visual do quadro e filtros identificados como indisponíveis.
-2. Cartões de exemplo e filtros funcionais.
-3. Detalhes, ciência e planejamento de tarefas.
-4. Movimentação, checagem e conclusão com validação das regras.
+Os nomes das colunas ainda precisam ser alinhados com `requisitos.md`, que registra uma versão anterior do fluxo.
 
-Cada etapa deve produzir uma mudança revisável. Commits usam `tipo(escopo): descrição` em português, com `docs`, `feat`, `fix` ou `refactor`, conforme o conteúdo. Não são necessários commits vazios ou intervalos artificiais.
+## Commits
 
-As colunas seguem a proposta mais recente do protótipo. A documentação anterior possui nomes diferentes; a padronização deverá ser validada antes da implementação definitiva.
+Usar `tipo(escopo): descrição`, com mensagens em português. Exemplos: `feat(prototipo): adicionar filtro por origem` e `fix(prototipo): preservar filtros ao trocar de visualização`.
